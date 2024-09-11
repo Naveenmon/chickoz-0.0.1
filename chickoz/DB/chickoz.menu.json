@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "66d321afeee67b764ceb3270"
+  },
+  "foodname": "Chicken Burger",
+  "category": "Burger",
+  "price": 100,
+  "stock": "Available",
+  "img": "chickenburger.jpg"
+},
+{
+  "_id": {
+    "$oid": "66d329a2eee67b764ceb3271"
+  },
+  "foodname": "Smiles",
+  "category": "Fries",
+  "price": 80,
+  "stock": "Available",
+  "img": "smiles.jpg"
+}]

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Eatio - Restaurant Food Order Bootstrap Admin Dashboard</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
+    	<link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="dashboard.html" class="brand-logo">
+                <img class="logo-abbr" src="./images/logo.png" alt="">
+                <img class="logo-compact" src="./images/logo-text.png" alt="">
+                <img class="brand-title" src="./images/logo-text.png" alt="">
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+		
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">    
+                        </div>
+                        <ul class="navbar-nav header-right">
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+									<div class="header-info">
+										<span>Hello, <strong>Kelvin</strong></span>
+									</div>
+                                    <img src="images/profile/pic1.jpg" width="20" alt=""/>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="./app-profile.html" class="dropdown-item ai-icon">
+                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        <span class="ml-2">Profile </span>
+                                    </a>
+                                    <a href="./email-inbox.html" class="dropdown-item ai-icon">
+                                        <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        <span class="ml-2">Inbox </span>
+                                    </a>
+                                    <a href="./page-login.html" class="dropdown-item ai-icon">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span class="ml-2">Logout </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="deznav">
+            <div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+                    <li><a href="dashboard.html">
+							<i class="flaticon-381-networking"></i>
+							<span class="nav-text">Dashboard</span>
+						</a>
+                    </li>
+					<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-notebook-1"></i>
+							<span class="nav-text">Orders</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="current-order.html">Current Order</a></li>
+							<li><a href="./order.html">Order</a></li>
+						</ul>
+					</li>
+					<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-radar"></i>
+							<span class="nav-text">Menu</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="./add-category.html"><span class="fa fa-plus" aria-hidden="true"></span> Category</a></li>
+							<li><a href="./product-list.html">Category 1</a></li>
+							<li><a href="./product-list.html">Category 2 </a></li>
+							<li><a href="./product-list.html">Category 3</a></li>
+						</ul>
+					</li>
+					<li><a href="./user.html">
+							<i class="flaticon-381-user-7"></i>
+							<span class="nav-text">User</span>
+						</a>
+					</li>
+					
+                    <li><a href="./transcation-details.html">
+						<i class="flaticon-381-archive"></i>
+						<span class="nav-text">Transaction</span>
+					</a>
+				</li>
+                </ul>
+
+			</div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Orders</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Order</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="form-head d-flex mb-3 align-items-start">
+					<div class="dropdown custom-dropdown">
+						<button type="button" class="btn btn-primary light d-flex align-items-center svg-btn" data-toggle="dropdown" aria-expanded="false">
+							<i class="fa fa-download"></i>
+							<span class="fs-16 ml-3">Export</span>
+							<i class="fa fa-angle-down scale5 ml-3"></i>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#">PDF</a>
+							<a class="dropdown-item" href="#">EXCEL</a>
+						</div>
+					</div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-sm mb-0">
+                                        <thead>
+                                            <tr>
+												<th class="align-middle">Order ID</th>
+                                                <th class="align-middle">Order</th>
+                                                <th class="align-middle pr-7">Date</th>
+                                                <th class="align-middle" style="min-width: 12.5rem;">Ship To</th>
+                                                <th class="align-middle text-right">Status</th>
+                                                <th class="align-middle text-right">Amount</th>
+                                                <th class="no-sort"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="orders">
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #5543210
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Ricky
+                                                        Antony</strong><br /><a href="callto:ricky@example.com">934224566</a></td>
+                                                <td class="py-2">20/04/2020</td>
+                                                <td class="py-2">Ricky Antony, 2392 Main Avenue, Penasauka, New Jersey 02149
+                                                    <p class="mb-0 text-500">Via Flat Rate</p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-success">Delivered<span
+                                                            class="ml-1 fa fa-check"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$99
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #5523678
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Kin Rossow</strong><br /><a href="mailto:kin@example.com">942789435</a></td>
+                                                <td class="py-2">20/04/2020</td>
+                                                <td class="py-2">Kin Rossow, 1 Hollywood Blvd,Beverly Hills, California 90210
+                                                    <p class="mb-0 text-500">Via Free Shipping
+                                                    </p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-primary">Processing<span
+                                                            class="ml-1 fa fa-redo"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$120
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #5678123
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Merry
+                                                        Diana</strong><br /><a href="mailto:merry@example.com">958832456</a></td>
+                                                <td class="py-2">30/04/2020</td>
+                                                <td class="py-2">Merry Diana, 1 Infinite Loop, Cupertino, California 90210
+                                                    <p class="mb-0 text-500">Via Link Road</p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-secondary">On
+                                                        Hold<span class="ml-1 fa fa-ban"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$70
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #5678321
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Bucky
+                                                        Robert</strong><br /><a href="mailto:bucky@example.com">986572341</a></td>
+                                                <td class="py-2">30/04/2020</td>
+                                                <td class="py-2">Bucky Robert, 1 Infinite Loop, Cupertino, California 90210
+                                                    <p class="mb-0 text-500">Via Free Shipping</p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-warning">Pending<span
+                                                            class="ml-1 fas fa-stream"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$92
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #5467890
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Rocky
+                                                        Zampa</strong><br /><a href="mailto:rocky@example.com">967823456</a></td>
+                                                <td class="py-2">30/04/2020</td>
+                                                <td class="py-2">Rocky Zampa, 1 Infinite Loop, Cupertino, California 90210
+                                                    <p class="mb-0 text-500">Via Free Road</p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-secondary">On
+                                                        Hold<span class="ml-1 fa fa-ban"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$120
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #6789028
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Ricky John</strong><br /><a href="mailto:ricky@example.com">86732456</a></td>
+                                                <td class="py-2">30/04/2020</td>
+                                                <td class="py-2">Ricky John, 1 Infinite Loop, Cupertino, California 90210
+                                                    <p class="mb-0 text-500">Via Free Shipping</p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-primary">Processing<span
+                                                            class="ml-1 fa fa-redo"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$145
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+													#6457890
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Cristofer
+                                                        Henric</strong><br /><a href="mailto:cristofer@example.com">102374568</a>
+                                                </td>
+                                                <td class="py-2">30/04/2020</td>
+                                                <td class="py-2">Cristofer Henric, 1 Infinite Loop, Cupertino, California 90210
+                                                    <p class="mb-0 text-500">Via Flat Rate
+                                                    </p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-success">Delivered<span
+                                                            class="ml-1 fa fa-check"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$55
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Completed</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #3456789
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Brate Lee</strong><br /><a href="mailto:lee@example.com">lee@example.com</a></td>
+                                                <td class="py-2">29/04/2020</td>
+                                                <td class="py-2">Brate Lee, 1 Infinite Loop, Cupertino, California 90210
+                                                    <p class="mb-0 text-500">Via Link Road</p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-secondary">On
+                                                        Hold<span class="ml-1 fa fa-ban"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$90
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #6345980
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Thomas
+                                                        Stephenson</strong><br /><a href="mailto:Stephenson@example.com">Stephenson@example.com</a>
+                                                </td>
+                                                <td class="py-2">29/04/2020</td>
+                                                <td class="py-2">Thomas Stephenson, 116 Ballifeary Road, Bamff
+                                                    <p class="mb-0 text-500">Via Flat Rate</p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-primary">Processing<span
+                                                            class="ml-1 fa fa-redo"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$52
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="btn-reveal-trigger">
+                                                <td class="py-2">
+                                                    #8904567
+                                                </td>
+                                                <td class="py-2">
+                                                    <a href="#">
+                                                        <strong>Evie Singh</strong><br /><a href="mailto:eviewsing@example.com">eviewsing@example.com</a>
+                                                </td>
+                                                <td class="py-2">29/04/2020</td>
+                                                <td class="py-2">Evie Singh, 54 Castledore Road, Tunstead
+                                                    <p class="mb-0 text-500">Via Flat Rate</p>
+                                                </td>
+                                                <td class="py-2 text-right"><span class="badge badge-success">Delivered<span
+                                                            class="ml-1 fa fa-check"></span></span>
+                                                </td>
+                                                <td class="py-2 text-right">$90
+                                                </td>
+                                                <td class="py-2 text-right">
+                                                    <div class="dropdown text-sans-serif"><button class="btn btn-primary tp-btn-light sharp" type="button" id="order-dropdown-0" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+                                                        <div class="dropdown-menu dropdown-menu-right border py-0" aria-labelledby="order-dropdown-0">
+                                                            <div class="py-2"><a class="dropdown-item" href="#!">Delivered</a><a class="dropdown-item" href="#!">Processing</a><a class="dropdown-item" href="#!">On Hold</a><a class="dropdown-item" href="#!">Pending</a>
+                                                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="./vendor/global/global.min.js"></script>
+	<script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="./vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="./js/custom.min.js"></script>
+	<script src="./js/deznav-init.js"></script>
+	<!-- Apex Chart -->
+	<script src="./vendor/apexchart/apexchart.js"></script>
+
+    <script src="./vendor/highlightjs/highlight.pack.min.js"></script>
+    <!-- Circle progress -->
+
+
+
+</body>
+
+</html>

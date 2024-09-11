@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    {% include 'link.html' %}
+</head>
+
+<body>
+    <div class="container-fluid bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            {% include 'nav.html' %}
+
+            <div class="container-fluid py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Food Menu</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Menu</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Menu Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
+                    <h1 class="mb-5">Most Popular Items</h1>
+                </div>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                         {% set t=namespace(tot=0) %}
+                        {% for i in l%}
+                        {% if t.tot!=0 %} <li style="width:2px;background-color:#ff0000; margin-bottom:10px;"> </li> {% endif %}
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 {% if t.tot==0 %} active{% endif %}" data-bs-toggle="pill" href="#{{i.category}}">
+                                <div class="ps-3">
+                                    <h6 class="mt-n1 mb-0">{{ i.category }}</h6>
+                                </div>
+                            </a>
+                        </li>
+                         {% set t.tot=t.tot+ 1 %}
+                        {% endfor %}
+                    </ul>
+                    <div class="tab-content">
+                        {% set t=namespace(tot=0) %}
+                        {% for i in l %}
+                        <div id="{{i.category}}" class="tab-pane fade show p-0 {% if t.tot==0 %} active{% endif %}">
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="/{{i.category}}/{{i.img}}" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>{{i.foodname}}</span>
+                                                <div>
+                                                    <button class="minus-btn w-10" onclick="decrement()">-</button>
+                                                    <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                                                    <button class="plus-btn" onclick="increment()">+</button>
+                                                </div>
+                                                <span class="text-primary">{{i.price}}</span>
+                                                <a class="btn btn-outline-light  btn-social" href=""><i class="fa fa-cart-plus text-primary" aria-hidden="true"></i></a>
+                                            </h5>
+                                            <small class="fst-italic text-success fw-bolder">{{i.stock}}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         {%- set t.tot=t.tot+ 1 %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+        
+
+        <!-- Footer Start -->
+        {% include 'footer.html' %}
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+   {% include 'script.html' %}
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

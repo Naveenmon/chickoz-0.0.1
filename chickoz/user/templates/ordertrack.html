@@ -1,0 +1,99 @@
+
+<!-- fvfdvfdvfv -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    {% include 'link.html' %}
+    <link href="/user/css/track.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            {% include 'nav.html' %}
+
+            <div class="container-fluid py-5 bg-dark hero-header mb-5">
+                <div class="container text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Track Order</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container padding-bottom-3x mb-1">
+          <div class="card mb-3">
+            <div class="p-4 text-center text-white text-lg bg-dark rounded-top"><span class="text-uppercase">Tracking Order No - </span><span class="text-medium">34VB5540K83</span></div>
+            <div class="d-flex flex-wrap flex-sm-nowrap justify-content-between py-3 px-2 bg-secondary">
+              <div class="w-100 text-center py-1 px-2"><span class="text-medium">Status:</span> Preparing Order</div>
+              <div class="w-100 text-center py-1 px-2"><span class="text-medium">Expected Time:</span> 9:15 PM</div>
+            </div>
+            <div class="card-body">
+              <div class="steps d-flex flex-wrap flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
+                <div class="step completed">
+                  <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="fa fa-shopping-cart"></i></div>
+                  </div>
+                  <h4 class="step-title">Confirmed Order</h4>
+                </div>
+                <div class="step completed">
+                  <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="fa fa-utensils"></i></div>
+                  </div>
+                  <h4 class="step-title">Preparing Order</h4>
+                </div>
+                <div class="step">
+                  <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="fa fa-bicycle"></i></div>
+                  </div>
+                  <h4 class="step-title">Order Dispatched</h4>
+                </div>
+                <div class="step">
+                  <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="fa fa-home"></i></div>
+                  </div>
+                  <h4 class="step-title">Order Delivered</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-sm-between align-items-center">
+            <div class="text-left text-sm-right"><a class="btn btn-outline-primary btn-rounded btn-sm" href="/order" data-toggle="modal" data-target="#orderDetails">View Order Details</a></div>
+          </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Team Start -->
+
+        <!-- Team End -->
+
+
+        <!-- Footer Start -->
+        {% include 'footer.html' %}
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    {% include 'script.html' %}
+</body>
+
+</html>

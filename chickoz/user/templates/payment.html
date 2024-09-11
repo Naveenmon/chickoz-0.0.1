@@ -1,0 +1,178 @@
+
+<!-- fvfdvfdvfv -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    {% include 'link.html' %}
+    <link href="/user/css/checkout.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            {% include 'nav.html' %}
+
+            <div class="container-fluid py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Payment</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item"><a href="#">Cart</a></li>
+                            <li class="breadcrumb-item"><a href="#">Checkout</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Payments</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+         <div class="container py-5">
+            <div class="container">
+		      <div class="row">
+				  <div class="col-md-6">
+					  <div class="row mb-5">
+						<div class="col-md-12">
+						  <h2 class="h3 mb-3 text-black">Coupon Code</h2>
+						  <div class="p-3 p-lg-5 shadow-lg rounded-3 bg-white">
+
+							<label for="c_code" class="text-black mb-3">Enter your coupon code if you have one</label>
+							<div class="input-group w-75 couponcode-wrap">
+							  <input type="text" class="form-control me-2" id="c_code" placeholder="Coupon Code" aria-label="Coupon Code" aria-describedby="button-addon2">
+							  <div class="input-group-append">
+								<button class="btn btn-black btn-sm" type="button" id="button-addon2">Apply</button>
+							  </div>
+							</div>
+
+						  </div>
+						</div>
+					  </div>
+				  </div>
+                  <div class="col-md-6">
+					  <div class="row mb-5">
+						<div class="col-md-12">
+						  <h2 class="h3 mb-3 text-black">Your Order</h2>
+						  <div class="p-3 p-lg-5 shadow-lg rounded-3 bg-white">
+							<table class="table site-block-order-table mb-5">
+							  <thead>
+								<th>Product</th>
+								<th>Quantity</th>
+								<th>Total</th>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td>Italy Pizza</td>
+								  <td>1</td>
+								  <td>$250.00</td>
+								</tr>
+								<tr>
+								  <td>Combo Plate</td>
+								  <td>1</td>
+								  <td>$100.00</td>
+								</tr>
+								<tr>
+								  <td class="text-black font-weight-bold">Cart Subtotal</td>
+								  <td>2</td>
+								  <td class="text-black">$350.00</td>
+								</tr>
+								<tr>
+								  <td class="text-black font-weight-bold"><strong>Delivery Fee </strong>
+									  <span class="text-danger">*</span>
+								  </td>
+								  <td>-</td>
+								  <td class="text-black font-weight-bold"><strong>$50.00</strong></td>
+								</tr>
+								<tr>
+								  <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
+								  <td>-</td>
+								  <td class="text-black font-weight-bold"><strong>$400.00</strong></td>
+								</tr>
+							  </tbody>
+							</table>
+
+							<div class="border p-3 mb-3">
+							  <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">Net Banking</a></h3>
+
+							  <div class="collapse" id="collapsebank">
+								<div class="container-fluid py-1 d-flex float-left justify-content-center">
+									<div class="pe-2 py-3">
+										<a href="#"><img src="/user/img/SBI-Logo.png" style="width:100px;height: auto;max-width: 300px"></a>
+									</div>
+									<div class="ps-4 pe-2">
+										<a href="#"><img src="/user/img/HDFC_Logo.png" style="width:100px;height: auto;max-width: 300px"></a>
+									</div>
+									<div class="ps-4 py-2 pe-2">
+										<a href="#"><img src="/user/img/Axis_logo.png" style="width:100px;height: auto;max-width: 300px"></a>
+									</div>
+								</div>
+							  </div>
+							</div>
+
+							<div class="border p-3 mb-3">
+							  <h3 class="h6 mb-0"><a class="d-block" data-bs-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">UPI Payment</a></h3>
+
+							  <div class="collapse" id="collapsecheque">
+								<div class="container-fluid py-1 d-flex float-left justify-content-center">
+									<div class="ps-2 pe-2 py-1">
+										<a href="#"><img src="/user/img/Google-Pay-logo.png" style="width:100px;height: auto;max-width: 300px"></a>
+									</div>
+									<div class="ps-4 pe-3">
+										<a href="#"><img src="/user/img/PPay.png" style="width:100px;height: auto;max-width: 300px"></a>
+									</div>
+									<div class="ps-4 py-3 pe-2">
+										<a href="#"><img src="/user/img/Paytm_Logo.png" style="width:100px;height: auto;max-width: 300px"></a>
+									</div>
+								</div>
+							  </div>
+							</div>
+
+							<div class="form-group d-flex justify-content-center">
+							  <a class="btn btn-primary py-3 px-5 mt-2 rounded-pill" href="/payment">Pay Now</a>
+							</div>
+
+						  </div>
+						</div>
+					  </div>
+				  </div>
+		      <!-- your order -->
+              </div>
+		    </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Team Start -->
+
+        <!-- Team End -->
+
+
+        <!-- Footer Start -->
+        {% include 'footer.html' %}
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    {% include 'script.html' %}
+</body>
+
+</html>
