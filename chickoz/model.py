@@ -89,11 +89,11 @@ class model():
     #register
 
     def register(self,username, email, mobnum, password, role):
-        res = self.__mongo['users'].find({'email': email, 'password': password})
+        res = self.__mongo['user'].find({'email': email, 'password': password})
         result = self.fetch(res)
         if len(result)<=0:
             s = userdetails(username, email, mobnum, password, role)
-            self.__mongo[self._db]['users'].insert_one(s.getuser())
+            self.__mongo[self._db]['user'].insert_one(s.getuser())
             del s
             return True
         else:
@@ -101,17 +101,17 @@ class model():
 
     #login
     def login(email, password):
-        res = model.__mongo[model._db]['users'].find({'email': email, 'password': password})
+        res = model.__mongo[model._db]['user'].find({'email': email, 'password': password})
         result = model.fetch(res)
 
     def login(self, email, password):
-        res = self.__mongo['users'].find({'email': email, 'password': password})
+        res = self.__mongo['user'].find({'email': email, 'password': password})
         result = self.fetch(res)
         return result
 
     #Cart Check
     def cartcheck(self, session):
-        res = self.__mongo['users'].find({"_id": ObjectId(session['id'])}, {"_id": 0, "cart": 1})
+        res = self.__mongo['user'].find({"_id": ObjectId(session['id'])}, {"_id": 0, "cart": 1})
         r = self.fetch(res)
         r = r[0]
         return r
@@ -123,13 +123,13 @@ class model():
         r = r[0]
         one = {"product_id": ObjectId(id), "product_name": r['product_name'], "qnt": qnt, "price": r['price'],
                "img": r['img']}
-        self.__mongo['users'].update_one({"_id": ObjectId(session.get("id"))}, {"$push": {"cart": one}})
+        self.__mongo['user'].update_one({"_id": ObjectId(session.get("id"))}, {"$push": {"cart": one}})
 
     #Remove cart
     def removecart(self, id, session):
         r = self.cartcheck(session)
         r = r['cart']
-        self.__mongo['users'].update_one({"_id": ObjectId(session.get("id"))},
+        self.__mongo['user'].update_one({"_id": ObjectId(session.get("id"))},
                                          {"$pull": {"cart": {"product_id": ObjectId(id)}}})
 
     #Add category

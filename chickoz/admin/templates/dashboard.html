@@ -2,14 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
 	{% include 'dash-link.html' %}
-
-
-
 </head>
 <body>
 
@@ -38,9 +31,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="dashboard.html" class="brand-logo">
-                <img class="logo-abbr" src="/admin/images/logo.png" alt="" style="width: 60px;">
-                <img class="logo-compact" src="/admin/images/logo-text.png" alt="">
-                <img class="brand-title" src="/admin/images/logo-text.png" alt="">
+                <img class="logo-abbr" src="admin/images/logo.png" alt="" style="width: 60px;">
+                <img class="logo-compact" src="admin/images/logo-text.png" alt="">
+                <img class="brand-title" src="admin/images/logo-text.png" alt="">
             </a>
 
             <div class="nav-control">
@@ -78,7 +71,7 @@
 									<div class="header-info">
 										<span>Hello, <strong>Kelvin</strong></span>
 									</div>
-                                    <img src="images/profile/pic1.jpg" width="20" alt=""/>
+                                    <img src="admin/images/profile/pic1.jpg" width="20" alt=""/>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a href="./app-profile.html" class="dropdown-item ai-icon">
@@ -110,38 +103,38 @@
         <div class="deznav">
             <div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
-                    <li><a href="./dashboard.html">
+                    <li><a href="/admin/">
 							<i class="flaticon-381-networking"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
                     </li>
-					<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<li><a class="has-arrow ai-icon" href="javascript:void 0" aria-expanded="false">
 							<i class="flaticon-381-notebook-1"></i>
 							<span class="nav-text">Orders</span>
 						</a>
-						<ul aria-expanded="false">
-							<li><a href="current-order.html">Current Order</a></li>
-							<li><a href="./order.html">Order</a></li>
+						<ul aria-expanded="true">
+							<li><a href="/admin/current-order">Current Order</a></li>
+							<li><a href="/admin/order">Order</a></li>
 						</ul>
 					</li>
-					<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<li><a class="has-arrow ai-icon" href="javascript:void 0" aria-expanded="false">
 							<i class="flaticon-381-radar"></i>
 							<span class="nav-text">Menu</span>
 						</a>
 						<ul aria-expanded="false">
-							<li><a href="./add-category.html"><span class="fa fa-plus" aria-hidden="true"></span> Category</a></li>
-							<li><a href="./product-list.html">Category 1</a></li>
-							<li><a href="./product-list.html">Category 2 </a></li>
-							<li><a href="./product-list.html">Category 3</a></li>
+							<li><a href="/admin/add-category"><span class="fa fa-plus" aria-hidden="true"></span> Category</a></li>
+							<li><a href="/category">Category 1</a></li>
+							<li><a href="/category">Category 2 </a></li>
+							<li><a href="/category">Category 3</a></li>
 						</ul>
 					</li>
-					<li><a href="./user.html">
+					<li><a href="/user">
 							<i class="flaticon-381-user-7"></i>
 							<span class="nav-text">User</span>
 						</a>
 					</li>
 					
-                    <li><a href="./transcation-details.html">
+                    <li><a href="/transaction">
 						<i class="flaticon-381-archive"></i>
 						<span class="nav-text">Transaction</span>
 					</a>
@@ -350,14 +343,14 @@
 							<div class="card-body revenue-chart px-3">
 									<div class="d-flex align-items-end pr-3 pull-right revenue-chart-bar">
 										<div class="d-flex align-items-end mr-4">
-											<img src="images/svg/ic_stat2.svg" height="22" width="22" class="mr-2 mb-1" alt=""/>
+											<img src="admin/images/svg/ic_stat2.svg" height="22" width="22" class="mr-2 mb-1" alt=""/>
 											<div>
 												<small class="text-dark fs-14">Income</small>
 												<h3 class="font-w600 mb-0">$<span class="counter">41,512</span>k</h3>
 											</div>
 										</div>
 										<div class="d-flex align-items-end">
-											<img src="images/svg/ic_stat1.svg" height="22" width="22" class="mr-2 mb-1" alt=""/>
+											<img src="admin/images/svg/ic_stat1.svg" height="22" width="22" class="mr-2 mb-1" alt=""/>
 											<div>
 												<small class="text-dark fs-14">Expense</small>
 												<h3 class="font-w600 mb-0">$<span class="counter">41,512</span>k</h3>
@@ -416,7 +409,6 @@
     <!--**********************************
         Main wrapper end
     ***********************************-->
-	{% include 'dash-script.html' %}
 
 </body>
 </html>
